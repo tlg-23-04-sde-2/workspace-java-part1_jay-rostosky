@@ -26,7 +26,7 @@ public class Department {
     // fields
     private String name;
     private String location;
-    private Employee[] employees = new Employee[100];
+    private final Employee[] employees = new Employee[100];
     private int currentIndex = 0;  // for dealing with the array
 
     // constructors
@@ -58,6 +58,26 @@ public class Department {
     public void payEmployees() {
         for (int i = 0; i < currentIndex; i++) {
             employees[i].pay();
+        }
+    }
+
+    /*
+     * "Forced" holiday break.
+     * For all employees that are salaried, make them take vacation.
+     */
+    public void holidayBreak() {
+        for (int i = 0; i < currentIndex; i++) {
+            // if employees[i] is really a SalariedEmployee object, then
+            // "downcast" the Employee reference to more specific type SalariedEmployee.
+            // NOTE: we must check for the correct type before the downcast,
+            // otherwise we could blow up at runtime with ClassCastException
+
+            // Note that 'instanceof' is an IS-A check
+            // e.g., Executive instanceof SalariedEmployee is true
+            if (employees[i] instanceof SalariedEmployee) {  // this is an IS-A
+                SalariedEmployee semp = (SalariedEmployee) employees[i];
+                semp.takeVacation();
+            }
         }
     }
 
