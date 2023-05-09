@@ -21,7 +21,7 @@ import java.time.LocalDate;
  *   void work()        simulates work by printing a message to show it was called.
  *   String toString()  self-explanatory.
  */
-public class Employee {
+public abstract class Employee {
     // fields
     private String name;
     private LocalDate hireDate;
@@ -42,9 +42,12 @@ public class Employee {
         System.out.println(getName() + " working hard since " + getHireDate());
     }
 
-    public void pay() {
-        System.out.println(getName() + " is paid...somehow...");
-    }
+    /*
+     * We declare THAT "all employees get paid," BUT we can't implement it here.
+     * It's all about the "WHAT" and not the "HOW."
+     * We simply have no financial data to come up with a dollar figure.
+     */
+    public abstract void pay();
 
     // accessor methods
     public String getName() {

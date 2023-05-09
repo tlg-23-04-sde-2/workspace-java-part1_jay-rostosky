@@ -25,10 +25,10 @@ class HRClient {
         System.out.println(dept);  // toString() automatically called
 
         // add Employees to it
-        dept.addEmployee(new Employee("Jason", LocalDate.of(1990, 8, 24)));
-        dept.addEmployee(new Employee("Julie", LocalDate.of(2000, 2, 2)));
-        dept.addEmployee(new SalariedEmployee("Logan", LocalDate.of(2012, 12, 12), 1250.0));
-        dept.addEmployee(new HourlyEmployee("Amilia", LocalDate.of(2009, 9, 9), 25.0, 20.0));
+        dept.addEmployee(new SalariedEmployee("Jason",  LocalDate.of(1990, 8, 24), 1750.0));
+        dept.addEmployee(new HourlyEmployee("Julie",    LocalDate.of(2000, 2, 2), 45.0, 20.0));
+        dept.addEmployee(new SalariedEmployee("Logan",  LocalDate.of(2012, 12, 12), 1250.0));
+        dept.addEmployee(new HourlyEmployee("Amilia",   LocalDate.of(2009, 9, 9), 25.0, 20.0));
 
         // list its Employees
         System.out.println("\nList employees:");
