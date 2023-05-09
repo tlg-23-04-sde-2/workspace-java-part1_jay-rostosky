@@ -17,6 +17,7 @@ public class Corporation implements TaxPayer {
     private String name;
 
     public Corporation(String name) {
+        super();
         setName(name);
     }
 
