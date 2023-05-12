@@ -22,7 +22,7 @@ public interface Catalog {
      * This is basically a search method.
      *
      * A match is defined as any item whose title or artist contains the keyword.
-     * Searches are to be case insensitive.
+     * Searches are to be case-insensitive.
      *
      * A no-matches result should return an empty collection (not null).
      */
